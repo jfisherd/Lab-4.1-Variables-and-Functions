@@ -10,7 +10,7 @@ Task 3: eligibility of an individual is determined based on inputs <br>
 Task 4: task 2 is updated to handle discounts
 
 ## Running the program
-To use view the results of this lab and sample outputs, run "node index.js" in vscode.
+To view the results of this lab and sample outputs, run "node index.js" in vscode.
 
 ## Reflection Questions
 > How did you approach creating more flexible functions with parameters?
