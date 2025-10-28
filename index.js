@@ -44,12 +44,9 @@ function checkEligibility(age,isEmployed) {
     }
 }
 
-sampleApplicant1 = checkEligibility(18,true)
-sampleApplicant2 = checkEligibility(95,false)
-sampleApplicant3 = checkEligibility(12,true)
-console.log(sampleApplicant1)
-console.log(sampleApplicant2)
-console.log(sampleApplicant3)
+console.log(checkEligibility(18,true)) // eligible
+console.log(checkEligibility(95,false)) // conditionally eligible
+console.log(checkEligibility(12,true)) // ineligible
 
 // Task 4
 function calculateTotalCost(price,quantity,taxRate,discountRate=0){ // discountRate defaults to 0 if not included as an argument
@@ -57,15 +54,12 @@ function calculateTotalCost(price,quantity,taxRate,discountRate=0){ // discountR
         return "Invalid input"
     }
     else {
-        totalCost = (price * quantity) * (1-discountRate) * (1 + taxRate) // cost now accounts for discounted rates
+        totalCost = (price * quantity) * (1 - discountRate) * (1 + taxRate) // cost now accounts for percentage discount rates
         totalCost = Math.round(totalCost*100)/100
         return totalCost
     }
 }
 
-samplePurchase = calculateTotalCost(10,3,0.08)
-invalidPurchase = calculateTotalCost(-10,-10,-10)
-discountedPurchase = calculateTotalCost(100,100,0.07,0.5)
-console.log(samplePurchase)
-console.log(invalidPurchase)
-console.log(discountedPurchase)
+console.log(calculateTotalCost(10,3,0.08)) // a normal purchase
+console.log(calculateTotalCost(-10,-10,-10)) // an invalid purchase
+console.log(calculateTotalCost(100,100,0.07,0.5)) // a discounted purchase
